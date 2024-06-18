@@ -8,6 +8,8 @@ The following cli tools are required
 - kn (knative cli)
 - func (knative functions cli)
 
+Also, you want a dns proxy configuration to point *.test to local host
+
 ### Setup
 If not already available, create k3d default registry on port 5000
 ```shell
