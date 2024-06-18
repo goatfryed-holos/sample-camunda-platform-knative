@@ -2,6 +2,7 @@
 ### Prerequisites
 The following cli tools are required
 - docker
+- kubectl
 - k3d
 - kn (knative cli)
 - func (knative functions cli)
