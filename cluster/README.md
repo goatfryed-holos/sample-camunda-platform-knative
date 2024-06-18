@@ -4,6 +4,7 @@ The following cli tools are required
 - docker
 - kubectl
 - k3d
+- helm
 - kn (knative cli)
 - func (knative functions cli)
 
