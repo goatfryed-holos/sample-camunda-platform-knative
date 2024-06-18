@@ -1,0 +1,17 @@
+apiVersion: k3d.io/v1alpha5
+# https://k3d.io/v5.6.3/usage/configfile/
+kind: Simple
+metadata:
+  name: silly-goose # name that you want to give to your cluster (will still be prefixed with `k3d-`)
+servers: 1 # control plane nodes
+agents: 1 # worker nodes
+ports:
+  - port: 80:80 # same as `--port '8080:80@loadbalancer'`
+    nodeFilters:
+      - server:0:direct
+registries:
+  use:
+    - k3d-registry:5000
+options:
+  k3d:
+    disableLoadbalancer: true # we need to self-manage this
