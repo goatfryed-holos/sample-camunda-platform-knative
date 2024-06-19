@@ -1,0 +1,16 @@
+specVersion: 0.36.0
+name: spring-break
+runtime: springboot
+image: k3d-registry:5000/silly-goose/spring-break
+created: 2024-06-13T14:52:32.963965779+02:00
+build:
+  builder: pack
+  buildEnvs:
+  - name: BP_NATIVE_IMAGE
+    value: "false"
+  - name: BP_JVM_VERSION
+    value: "21"
+deploy:
+  healthEndpoints:
+    liveness: /actuator/health
+    readiness: /actuator/health
