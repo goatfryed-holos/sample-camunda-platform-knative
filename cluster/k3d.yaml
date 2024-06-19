@@ -4,8 +4,11 @@ kind: Simple
 metadata:
   name: silly-goose # name that you want to give to your cluster (will still be prefixed with `k3d-`)
 servers: 1 # control plane nodes
-agents: 1 # worker nodes
+agents: 0 # worker nodes
 ports:
+  - port: 26500:26500 # same as `--port '8080:80@loadbalancer'`
+    nodeFilters:
+      - server:0:direct
   - port: 80:80 # same as `--port '8080:80@loadbalancer'`
     nodeFilters:
       - server:0:direct
