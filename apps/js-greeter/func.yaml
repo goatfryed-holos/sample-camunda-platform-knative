@@ -1,0 +1,9 @@
+specVersion: 0.36.0
+name: apps
+runtime: typescript
+created: 2024-06-14T15:00:12.950529415+02:00
+image: k3d-registry:5000/silly-goose/js-greeter
+build:
+  buildEnvs:
+  - name: BP_NODE_RUN_SCRIPTS
+    value: build
