@@ -31,4 +31,4 @@ kubectl apply --filename https://github.com/knative/net-contour/releases/downloa
 See [knative setup](./knative/setup.md)
 
 #### setup camunda self managed
-See [camunda setup](./camunda-8/setup.md)
+See [camunda setup](camunda-platform/setup.md)
